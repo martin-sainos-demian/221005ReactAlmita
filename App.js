@@ -36,5 +36,8 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
     backgroundColor:'#a000e0'
+  },
+  btntxt:{
+    fontSize:20
   }
 });
