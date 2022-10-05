@@ -8,7 +8,7 @@ export default function App() {
         <TouchableOpacity style={styles.btn}>
           <Text style={styles.btntxt}>+</Text>
         </TouchableOpacity>
-        <View></View>
+        <View style={styles.separate}></View>
         <TouchableOpacity style={styles.btn}>
           <Text style={styles.btntxt}>-</Text>
         </TouchableOpacity>
@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
     backgroundColor:'#a000e0'
   },
   btntxt:{
-    fontSize:20
+    fontSize:20,
+  },
+  separate:{
+    width:10
   }
 });
