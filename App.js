@@ -1,15 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function App() {
+const App=()=>{
+
+  const [count,setCount]=useState(0);
+  const onPress=()=> setCount(prevCount=>prevCount+1)
+  const onPress1=()=> setCount(prevCount=>prevCount-1)
+
   return (
     <View style={styles.container}>
       <View style={styles.subcontainer}>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn}
+        onPress={onPress}>
           <Text style={styles.btntxt}>+</Text>
         </TouchableOpacity>
+        <Text style={styles.txtcount}></Text>
         <View style={styles.separate}></View>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn}
+        onPress={onPress1}>
           <Text style={styles.btntxt}>-</Text>
         </TouchableOpacity>
       </View>
@@ -41,6 +50,8 @@ const styles = StyleSheet.create({
     fontSize:20,
   },
   separate:{
-    width:10
+    width:100
   }
 });
+
+export default App;
